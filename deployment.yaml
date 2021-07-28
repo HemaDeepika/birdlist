@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimeStamp: Null
+  namespace: gonamespace
+  labels:
+    app: gowebapp
+  name: gowebapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gowebapp
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+  template:
+    metadata:
+      creationTimeStamp: Null
+      namespace: gonamespace
+      labels:
+         app: gowebapp
+    spec:
+      containers:
+      - image: bird-app:v1
+        name: gowebapp
+        resources: {}
+        imagePullPolicy: Never
+        port:
+          - containerPort: 8080
+ status: {}
