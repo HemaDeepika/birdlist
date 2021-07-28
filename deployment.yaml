@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimeStamp: Null
+  creationTimestamp: null
   namespace: gonamespace
   labels:
     app: gowebapp
@@ -18,16 +18,16 @@ spec:
       maxUnavailable: 25%
   template:
     metadata:
-      creationTimeStamp: Null
+      creationTimestamp: null
       namespace: gonamespace
       labels:
-         app: gowebapp
+        app: gowebapp
     spec:
       containers:
-      - image: bird-app:v1
+      - image: birdpedia-app:v1
         name: gowebapp
         resources: {}
         imagePullPolicy: Never
-        port:
-          - containerPort: 8080
-  status: {}
+        ports:
+          - containerPort: 8081
+status: {}
