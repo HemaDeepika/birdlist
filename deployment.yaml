@@ -29,5 +29,5 @@ spec:
         resources: {}
         imagePullPolicy: Never
         ports:
-          - containerPort: 8081
+          - containerPort: 8080
 status: {}
