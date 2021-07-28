@@ -24,7 +24,7 @@ spec:
         app: gowebapp
     spec:
       containers:
-      - image: bird-app:v1
+      - image: bird-app:v3
         name: gowebapp
         resources: {}
         imagePullPolicy: Never
