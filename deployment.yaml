@@ -30,4 +30,4 @@ spec:
         imagePullPolicy: Never
         port:
           - containerPort: 8080
- status: {}
+  status: {}
